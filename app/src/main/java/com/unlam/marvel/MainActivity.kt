@@ -1,20 +1,19 @@
 package com.unlam.marvel
 
-import android.graphics.Rect
 import android.os.Bundle
-import android.view.View
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.ItemDecoration
+import com.unlam.marvel.data.Character
 import com.unlam.marvel.databinding.ActivityMainBinding
+import com.unlam.marvel.domain.CharactersAdapter
+import com.unlam.marvel.ui.CharactersViewModel
+import com.unlam.marvel.ui.CharactersViewModelFactory
+import com.unlam.marvel.ui.ScreenState
+import com.unlam.marvel.ui.VerticalSpaceItemDecoration
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
